@@ -1,5 +1,6 @@
 ﻿namespace WebApi.Datas
 {
+    #nullable disable
     public class SmtpSettings
     {
         public string Host { get; set; }
