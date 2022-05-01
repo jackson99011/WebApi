@@ -1,6 +1,7 @@
 
 
 using Microsoft.EntityFrameworkCore;
+using WebApi.Datas;
 using WebApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -19,6 +20,10 @@ builder.Services.AddDbContext<ContosouniversityContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
+
+// Add setting to the container.
+
+builder.Services.Configure<SmtpSettings>(builder.Configuration.GetSection("SmtpSettings"));
 
 // Add services to the container.
 
