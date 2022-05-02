@@ -1,1 +1,1 @@
-WebApi VS WebMVC Demo
+WebApi
